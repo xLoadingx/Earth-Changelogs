@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Earth Changelog</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .top-bar {
+            background: #1e1e1e;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+        .buttons {
+            position: absolute;
+            right: 15px;
+            display: flex;
+            gap: 10px;
+        }
+        .buttons button {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+        .buttons button:hover {
+            background: #555;
+            transform: scale(1.1);
+        }
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        .about-content {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        🌍 Earth Changelog
+        <div class="buttons">
+            <button onclick="window.location.href='index.html'">Main Page</button>
+            <button onclick="window.location.href='download.html'">Download</button>
+            <button onclick="window.location.href='about.html'">About</button>
+        </div>
+    </div>
+    <div class="about-container">
+        <div class="about-content">
+            <h1>About Earth Changelog</h1>
+            <p>Earth Changelog is a fun and interactive way to track real-world events as if they were game patch notes.</p>
+            <p>From major world events to minor societal bug fixes, we bring an entertaining perspective on reality updates.</p>
+            <p>Stay tuned for new changelogs every day at 7 PM EST!</p>
+        </div>
+    </div>
+</body>
+</html>
