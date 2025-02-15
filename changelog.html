@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Patch Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #0d0d0d;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .top-bar {
+            background: #1e1e1e;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        .patch-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 80px auto 50px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .patch-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            width: 100%;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .patch-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 30px rgba(0, 255, 150, 1);
+        }
+        .patch-title {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        .patch-notes li {
+            background: rgba(50, 50, 50, 0.5);
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .patch-notes li:hover {
+            background: rgba(100, 100, 100, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        🌍 Earth Changelog
+    </div>
+    <div class="patch-container">
+        <div class="patch-box">
+            <div class="patch-title">🌍 Earth v2024.3.1</div>
+            <div class="patch-date">March 10, 2024</div>
+            <ul class="patch-notes">
+                <li>🔹 Added new AI-generated changelogs</li>
+                <li>🐛 Fixed global climate instability</li>
+                <li>⚖️ Balanced economic growth for more stability</li>
+            </ul>
+        </div>
+        <div class="patch-box">
+            <div class="patch-title">🌍 Earth v2024.3.0</div>
+            <div class="patch-date">March 5, 2024</div>
+            <ul class="patch-notes">
+                <li>🚀 Launched new space mission to Mars</li>
+                <li>🏛️ Introduced new global agreements for sustainability</li>
+                <li>📉 Fixed inflation spikes in certain regions</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
