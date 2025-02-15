@@ -1,0 +1,31 @@
+{
+    "patches": [
+        {
+            "version": "Earth v2024.3.1",
+            "date": "March 10, 2024",
+            "notes": [
+                "🔹 Added new AI-generated changelogs",
+                "🐛 Fixed global climate instability",
+                "⚖️ Balanced economic growth for more stability"
+            ]
+        },
+        {
+            "version": "Earth v2024.3.0",
+            "date": "March 5, 2024",
+            "notes": [
+                "🚀 Launched new space mission to Mars",
+                "🏛️ Introduced new global agreements for sustainability",
+                "📉 Fixed inflation spikes in certain regions"
+            ]
+        },
+        {
+            "version": "Earth v2024.2.9",
+            "date": "February 28, 2024",
+            "notes": [
+                "🏗️ Constructed new sustainable energy projects",
+                "🔬 Discovery of new medical advancements",
+                "🐛 Fixed bug where AI was too sarcastic"
+            ]
+        }
+    ]
+}
