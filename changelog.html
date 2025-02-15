@@ -18,7 +18,7 @@
             background: #1e1e1e;
             padding: 15px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             font-size: 1.5em;
             font-weight: bold;
@@ -27,6 +27,25 @@
             top: 0;
             width: 100%;
             z-index: 100;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-right: 20px;
+        }
+        .buttons button {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+        .buttons button:hover {
+            background: #555;
+            transform: scale(1.1);
         }
         .patch-container {
             width: 90%;
@@ -66,30 +85,40 @@
             background: rgba(100, 100, 100, 0.8);
         }
     </style>
+    <script>
+        async function loadPatchNotes() {
+            const response = await fetch('patchnotes.json');
+            const data = await response.json();
+            const container = document.querySelector('.patch-container');
+            container.innerHTML = '';
+            
+            data.patches.forEach(patch => {
+                const patchBox = document.createElement('div');
+                patchBox.classList.add('patch-box');
+                patchBox.innerHTML = `
+                    <div class="patch-title">🌍 ${patch.version}</div>
+                    <div class="patch-date">${patch.date}</div>
+                    <ul class="patch-notes">
+                        ${patch.notes.map(note => `<li>${note}</li>`).join('')}
+                    </ul>
+                `;
+                container.appendChild(patchBox);
+            });
+        }
+        window.onload = loadPatchNotes;
+    </script>
 </head>
 <body>
     <div class="top-bar">
         🌍 Earth Changelog
+        <div class="buttons">
+            <button onclick="window.location.href='index.html'">Main Page</button>
+            <button onclick="window.location.href='download.html'">Download</button>
+            <button onclick="window.location.href='about.html'">About</button>
+        </div>
     </div>
     <div class="patch-container">
-        <div class="patch-box">
-            <div class="patch-title">🌍 Earth v2024.3.1</div>
-            <div class="patch-date">March 10, 2024</div>
-            <ul class="patch-notes">
-                <li>🔹 Added new AI-generated changelogs</li>
-                <li>🐛 Fixed global climate instability</li>
-                <li>⚖️ Balanced economic growth for more stability</li>
-            </ul>
-        </div>
-        <div class="patch-box">
-            <div class="patch-title">🌍 Earth v2024.3.0</div>
-            <div class="patch-date">March 5, 2024</div>
-            <ul class="patch-notes">
-                <li>🚀 Launched new space mission to Mars</li>
-                <li>🏛️ Introduced new global agreements for sustainability</li>
-                <li>📉 Fixed inflation spikes in certain regions</li>
-            </ul>
-        </div>
+        <p>Loading patch notes...</p>
     </div>
 </body>
 </html>
