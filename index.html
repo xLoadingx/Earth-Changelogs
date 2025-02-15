@@ -4,72 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Earth Changelog</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #121212;
-            color: #ffffff;
-        }
-        .top-bar {
-            background: #1e1e1e;
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2em;
-            font-weight: bold;
-            box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
-            position: relative;
-        }
-        .buttons {
-            position: absolute;
-            right: 15px;
-            display: flex;
-            gap: 10px;
-        }
-        .buttons button {
-            background: #333;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 0.9em;
-            transition: transform 0.2s ease, background 0.2s ease;
-        }
-        .buttons button:hover {
-            background: #555;
-            transform: scale(1.1);
-        }
-        .main-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: calc(100vh - 60px);
-            padding: 20px;
-        }
-        .container {
-            text-align: center;
-            padding: 20px;
-            background: #1e1e1e;
-            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.5s ease-out forwards;
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="top-bar">
